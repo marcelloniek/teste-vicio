@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from 'react';
@@ -77,11 +79,11 @@ export default function TesteVicio() {
                 <button
                   key={num}
                   onClick={() => registrarResposta(num)}
-                  className={\`flex items-center justify-center rounded-full text-white font-bold hover:scale-110 transition transform bg-gradient-to-br \${corGradiente[num]}\`}
+                  className={`flex items-center justify-center rounded-full text-white font-bold hover:scale-110 transition transform bg-gradient-to-br ${corGradiente[num]}`}
                   style={{
-                    width: \`\${30 + num * 5}px\`,
-                    height: \`\${30 + num * 5}px\`,
-                    fontSize: \`\${12 + num}px\`
+                    width: `${30 + num * 5}px`,
+                    height: `${30 + num * 5}px`,
+                    fontSize: `${12 + num}px`
                   }}
                 >
                   {num}
@@ -105,7 +107,7 @@ export default function TesteVicio() {
                 ? "/images/semaforo-amarelo.png"
                 : "/images/semaforo-vermelho.png"
             }
-            alt={\`Indicador \${resultado}\`}
+            alt={`Indicador ${resultado}`}
             className="w-40 h-auto mx-auto mb-4"
           />
           {resultado === "VERDE" && (
